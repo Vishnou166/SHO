@@ -1,68 +1,63 @@
 import * as React from "react";
-import {
-  Pressable,
-  Image,
-  StyleSheet,
-  View,
-  Text,
-  SafeAreaView,
-} from "react-native";
-import { TextInput } from "react-native";
-import { ImageBackground } from "react-native";
+import { Image, SafeAreaView, StyleSheet, View } from "react-native";
+import { Button, TextInput } from "react-native-paper";
 
-const LOGINPAGE = ({ navigation }) => {
+export function LOGINPAGE({ navigation }) {
   return (
     <SafeAreaView style={styles.logInPage}>
-      <ImageBackground
+      <Image
         style={styles.logInPageChild}
         resizeMode="cover"
         source={require("./Polics.png")}
       />
-      <TextInput
-        style={[styles.rectangleTextinput]}
-        placeholder="Username"
-        textAlign="center"
-        mode="outlined"
-        theme={{ colors: { background: "#8b98d8" } }}
-      />
-      <TextInput
-        style={[styles.logInPageInner, styles.logLayout]}
-        placeholder="Password"
-        mode="outlined"
-        textAlign="center"
-        theme={{ colors: { background: "#8b98d8" } }}
-      />
-      <Pressable
-        style={[styles.rectanglePressable, styles.logLayout]}
+      <View style={[styles.logItem, styles.logInPageChild]} />
+      <View style={[styles.component3, styles.componentLayout]}>
+        <TextInput
+          placeholder="username"
+          style={[styles.component3Child]}
+          mode="outlined"
+        />
+      </View>
+      <View style={[styles.component4, styles.componentLayout]}>
+        <TextInput
+          placeholder="Password"
+          style={[styles.component3Child]}
+          mode="outlined"
+        />
+      </View>
+      <Button
+        mode="contained"
+        style={[styles.logInPageItem, styles.logInPageItemBorder]}
         onPress={() => {
           navigation.navigate("DashBoard");
         }}
-      />
-      <Text style={[styles.username, styles.logInTypo]}></Text>
-      <Text style={[styles.password, styles.logInTypo]}></Text>
-      <Text style={[styles.logIn, styles.logInTypo]}>LOG IN</Text>
-      <View style={[styles.rectangleView, styles.rectangleViewPosition]} />
-      <View style={[styles.logInPageChild1, styles.rectangleViewPosition]} />
+      >
+        LOG IN
+      </Button>
     </SafeAreaView>
   );
-};
+}
 
 const styles = StyleSheet.create({
-  logLayout: {
+  componentLayout: {
     height: 50,
-    borderStyle: "solid",
-    borderRadius: 50,
     left: "50%",
-    position: "absolute",
-    flex: 1,
+  },
+  logItem: {
+    backgroundColor: "#033ba6",
+    opacity: 0.5,
   },
   logInTypo: {
     textAlign: "left",
-    color: "#fff",
     fontFamily: "Roboto",
     lineHeight: 17,
     letterSpacing: 0.9,
     fontSize: 15,
+    position: "absolute",
+  },
+  logInPageItemBorder: {
+    borderStyle: "solid",
+    borderRadius: 50,
     position: "absolute",
   },
   rectangleViewPosition: {
@@ -82,62 +77,66 @@ const styles = StyleSheet.create({
     left: "50%",
     height: 800,
   },
-  rectangleTextinput: {
-    borderRadius: 50,
-    borderStyle: "solid",
-    flex: 1,
-    width: "100%",
-    height: 50,
+  username: {
+    top: "32%",
+    left: "10.8%",
+    color: "#000",
   },
-  logInPageInner: {
+  component3Child: {
+    top: "0%",
+    right: "0%",
+    bottom: "0%",
+    left: "0%",
+    width: "100%",
+    backgroundColor: "#fff",
+    opacity: 0.8,
+  },
+  component4: {
     top: 441,
     width: 250,
     marginLeft: -125,
     height: 50,
-    borderStyle: "solid",
-    borderRadius: 50,
+    position: "absolute",
   },
-  rectanglePressable: {
+  logInPageItem: {
     marginLeft: -50,
-    top: 600,
+    top: 662,
     backgroundColor: "rgba(199, 86, 86, 0.5)",
     borderColor: "#fff",
     borderWidth: 1,
     width: 100,
     height: 50,
-    borderStyle: "solid",
-    borderRadius: 50,
+    left: "50%",
   },
-  username: {
-    top: 380,
-    left: 142,
-  },
-  password: {
-    top: 457,
-    left: 143,
+  component3: {
+    top: 364,
+    width: 250,
+    marginLeft: -125,
+    height: 50,
+    position: "absolute",
   },
   logIn: {
     marginLeft: -25,
-    top: 617,
-    left: "50%",
+    top: 678,
     color: "#fff",
+    left: "50%",
     fontFamily: "Roboto",
     lineHeight: 17,
     letterSpacing: 0.9,
     fontSize: 15,
   },
-  rectangleView: {
+  logInPageInner: {
     top: 0,
   },
-  logInPageChild1: {
+  rectangleView: {
     bottom: 0,
   },
   logInPage: {
     backgroundColor: "#3a62ae",
     flex: 1,
-    width: "100%",
     overflow: "hidden",
     height: 800,
+    width: "100%",
   },
 });
 

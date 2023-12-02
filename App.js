@@ -24,22 +24,86 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Welcome">
-        <Stack.Screen name="Welcome" component={WELCOME} />
-        <Stack.Screen name="LoginPage" component={LOGINPAGE} />
-        <Stack.Screen name="Tracking" component={TRACKING} />
-        <Stack.Screen name="DashBoard" component={HOMEDB} />
-        <Stack.Screen name="SelectBeat" component={SELECTBEAT} />
-        <Stack.Screen name="SelectHamplets" component={SELECTHAMPLETS} />
-        <Stack.Screen name="Select" component={SELECT} />
-        <Stack.Screen name="SelectOfficers" component={SELECTOFFICERS} />
-        <Stack.Screen name="SelectTimings" component={SELECTTIMINGS} />
-        <Stack.Screen name="ViewBeat" component={VIEWBEAT} />
-        <Stack.Screen name="ViewDetails" component={VIEWDETAILS} />
-        <Stack.Screen name="ReportBeat" component={REPORTBEAT} />
-        <Stack.Screen name="Previous" component={PREVIOUS} />
-        <Stack.Screen name="Profile" component={PROFILE} />
-        <Stack.Screen name="Directory" component={DIRECTORY} />
-        <Stack.Screen name="Notifications" component={NOTIFICATIONS} />
+        <Stack.Screen
+          name="Welcome"
+          component={WELCOME}
+          options={{ header: () => null }}
+        />
+        <Stack.Screen
+          name="LoginPage"
+          component={LOGINPAGE}
+          options={{ header: () => null }}
+        />
+        <Stack.Screen
+          name="Tracking"
+          component={TRACKING}
+          options={{ header: () => null }}
+        />
+        <Stack.Screen
+          name="DashBoard"
+          component={HOMEDB}
+          options={{ header: () => null }}
+        />
+        <Stack.Screen
+          name="SelectBeat"
+          component={SELECTBEAT}
+          options={{ header: () => null }}
+        />
+        <Stack.Screen
+          name="SelectHamplets"
+          component={SELECTHAMPLETS}
+          options={{ header: () => null }}
+        />
+        <Stack.Screen
+          name="Select"
+          component={SELECT}
+          options={{ header: () => null }}
+        />
+        <Stack.Screen
+          name="SelectOfficers"
+          component={SELECTOFFICERS}
+          options={{ header: () => null }}
+        />
+        <Stack.Screen
+          name="SelectTimings"
+          component={SELECTTIMINGS}
+          options={{ header: () => null }}
+        />
+        <Stack.Screen
+          name="ViewBeat"
+          component={VIEWBEAT}
+          options={{ header: () => null }}
+        />
+        <Stack.Screen
+          name="ViewDetails"
+          component={VIEWDETAILS}
+          options={{ header: () => null }}
+        />
+        <Stack.Screen
+          name="ReportBeat"
+          component={REPORTBEAT}
+          options={{ header: () => null }}
+        />
+        <Stack.Screen
+          name="Previous"
+          component={PREVIOUS}
+          options={{ header: () => null }}
+        />
+        <Stack.Screen
+          name="Profile"
+          component={PROFILE}
+          options={{ header: () => null }}
+        />
+        <Stack.Screen
+          name="Directory"
+          component={DIRECTORY}
+          options={{ header: () => null }}
+        />
+        <Stack.Screen
+          name="Notifications"
+          component={NOTIFICATIONS}
+          options={{ header: () => null }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

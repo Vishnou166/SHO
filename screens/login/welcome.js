@@ -1,20 +1,23 @@
 import * as React from "react";
 import { Image, StyleSheet, View, Text } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export function WELCOME({ navigation }) {
   return (
-    <View style={styles.welcomePage}>
+    <SafeAreaView style={styles.welcomePage}>
       <Image
         style={styles.welcomePosition}
-        resizeMode="cover" /*source="Rectangle 1.png"*/
+        resizeMode="cover"
+        source={require("./Polics.png")}
       />
       <View style={[styles.welcomePageItem, styles.welcomePosition]} />
       <Text style={[styles.eBeat, styles.eBeatFlexBox]}>#E-BEAT</Text>
-      <View style={styles.rectangleParent}>
+      <View style={[styles.rectangleParent]}>
         <View style={[styles.groupChild, styles.groupPosition]} />
         <Image
           style={[styles.groupItem, styles.groupPosition]}
-          resizeMode="cover" /*source="Rectangle 17.png"*/
+          resizeMode="cover"
+          source={require("./lion.png")}
         />
         <View style={[styles.groupInner, styles.groupPosition]} />
         <Text
@@ -23,9 +26,10 @@ export function WELCOME({ navigation }) {
             navigation.navigate("LoginPage");
           }}
         >{`Puducherry Police
-          					Government of Puducherry `}</Text>
+          					Government of 
+                         Puducherry `}</Text>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -37,7 +41,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: "50%",
     top: "50%",
-    height: 800,
+    height: 820,
   },
   eBeatFlexBox: {
     textAlign: "left",
@@ -50,6 +54,7 @@ const styles = StyleSheet.create({
   },
   welcomePageItem: {
     backgroundColor: "#033ba6",
+    opacity: 0.5,
   },
   eBeat: {
     marginTop: -20,
@@ -78,18 +83,18 @@ const styles = StyleSheet.create({
     width: 1,
   },
   puducherryPoliceGovernment1: {
-    top: 6,
+    top: 8,
     left: 46,
     fontSize: 12,
     letterSpacing: 0.7,
-    lineHeight: 17,
+    lineHeight: 11,
     fontFamily: "Roboto",
     color: "#050505",
     width: 119,
     height: 52,
   },
   rectangleParent: {
-    top: 663,
+    top: 693,
     left: 97,
     width: 165,
     height: 61,

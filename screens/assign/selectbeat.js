@@ -15,14 +15,14 @@ export function SELECTBEAT({ navigation }) {
         <Image
           style={styles.vectorIcon3}
           resizeMode="cover"
-          source={require("./assets/favicon.png")}
+          source={require("./favicon.png")}
         />
       </Pressable>
       <View style={[styles.vectorWrapper, styles.vectorPosition]}>
         <Image
           style={styles.vectorIcon4}
           resizeMode="cover"
-          source={require("./assets/favicon.png")}
+          source={require("./favicon.png")}
         />
       </View>
       <Pressable
@@ -32,7 +32,7 @@ export function SELECTBEAT({ navigation }) {
         <Image
           style={styles.vectorIcon3}
           resizeMode="cover"
-          source={require("./assets/favicon.png")}
+          source={require("./favicon.png")}
         />
       </Pressable>
       <View style={[styles.rectangleView, styles.rectangleViewPosition]} />

@@ -71,8 +71,6 @@ export function HOMEDB({ navigation }) {
       <Text style={[styles.view, styles.viewTypo]}>View</Text>
       <Text style={[styles.update, styles.viewTypo]}>Update</Text>
       <Text style={[styles.reports, styles.assignTypo]}>Reports</Text>
-      <View style={[styles.rectangleView, styles.homeDbChild4Position]} />
-      <View style={[styles.homeDbChild4, styles.homeDbChild4Position]} />
     </View>
   );
 }
