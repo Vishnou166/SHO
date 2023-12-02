@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
   },
   groupChild: {
     left: 0,
-    backgroundColor: "#fefefe",
+    backgroundColor: "transparent",
     width: 150,
   },
   groupItem: {

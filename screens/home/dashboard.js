@@ -1,33 +1,29 @@
 import * as React from "react";
 import { StyleSheet, View, Text, Image, Pressable } from "react-native";
+import Icon from "react-native-vector-icons/Ionicons";
+import IconButton from "react-native-vector-icons/Ionicons";
 
 export function HOMEDB({ navigation }) {
   return (
     <View style={styles.homeDb}>
       <View style={styles.homeDbChild} />
       <Text style={styles.eBeat}>#E-BEAT</Text>
-      <View
-        style={[styles.frame, styles.framePosition]}
-        onPress={() => {
-          navigation.navigate("Profile");
-        }}
-      >
-        <Image
-          style={styles.vectorIcon2}
-          resizeMode="cover"
-          source={require("./favicon.png")}
+      <View style={[styles.frame, styles.framePosition]}>
+        <IconButton
+          icon="person-circle"
+          size={20}
+          onPress={() => {
+            navigation.navigate("Profile");
+          }}
         />
       </View>
-      <View
-        style={[styles.vectorWrapper, styles.framePosition]}
-        onPress={() => {
-          navigation.navigate("Notifications");
-        }}
-      >
-        <Image
+      <View style={[styles.vectorWrapper, styles.framePosition]}>
+        <Icon
+          source="person-circle"
           style={styles.vectorIcon3}
-          resizeMode="cover"
-          source={require("./favicon.png")}
+          onPress={() => {
+            navigation.navigate("Notifications");
+          }}
         />
       </View>
       <View style={styles.homeDbItem} />

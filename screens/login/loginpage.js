@@ -31,6 +31,9 @@ export function LOGINPAGE({ navigation }) {
         onPress={() => {
           navigation.navigate("DashBoard");
         }}
+        onLongPress={() => {
+          navigation.navigate("BeatDashBoard");
+        }}
       >
         LOG IN
       </Button>

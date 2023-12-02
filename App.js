@@ -17,6 +17,8 @@ import VIEWDETAILS from "./screens/view/viewdetails";
 import PREVIOUS from "./screens/reports/previous";
 import SELECT from "./screens/assign/select";
 import TRACKING from "./screens/tracking/tracking";
+import DASHBOARD from "./screens/beatscreens/home/beatdashboard";
+import BEATBOOK from "./screens/beatscreens/home/beatbook";
 
 const Stack = createStackNavigator();
 
@@ -102,6 +104,16 @@ const App = () => {
         <Stack.Screen
           name="Notifications"
           component={NOTIFICATIONS}
+          options={{ header: () => null }}
+        />
+        <Stack.Screen
+          name="BeatDashBoard"
+          component={DASHBOARD}
+          options={{ header: () => null }}
+        />
+        <Stack.Screen
+          name="BeatBook"
+          component={BEATBOOK}
           options={{ header: () => null }}
         />
       </Stack.Navigator>
